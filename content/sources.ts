@@ -1,0 +1,68 @@
+import type { Source } from "@/content/types";
+
+export const sources: Record<string, Source> = {
+  "playstation-game": {
+    id: "playstation-game",
+    title: "《漫威金刚狼》PS5 游戏页",
+    publisher: "PlayStation",
+    url: "https://www.playstation.com/zh-hans-hk/games/marvels-wolverine/",
+    publishedAt: "2026-08-27",
+    kind: "official",
+  },
+  "gameplay-reveal": {
+    id: "gameplay-reveal",
+    title: "Marvel’s Wolverine: new gameplay, story details from State of Play",
+    publisher: "PlayStation Blog / Insomniac Games",
+    url: "https://blog.playstation.com/2026/06/02/marvels-wolverine-new-gameplay-story-details-from-state-of-play/",
+    publishedAt: "2026-06-02",
+    kind: "official",
+  },
+  "story-trailer": {
+    id: "story-trailer",
+    title: "Marvel’s Wolverine: Story Trailer, new art, composer details, and more",
+    publisher: "PlayStation Blog / Insomniac Games",
+    url: "https://blog.playstation.com/2026/07/23/marvels-wolverine-story-trailer-new-art-composer-details-and-more/",
+    publishedAt: "2026-07-23",
+    kind: "official",
+  },
+  "hardware-reveal": {
+    id: "hardware-reveal",
+    title: "First look at Marvel’s Wolverine Limited Edition PS5 Console bundle and accessories",
+    publisher: "PlayStation Blog",
+    url: "https://blog.playstation.com/2026/08/11/first-look-at-marvels-wolverine-limited-edition-ps5-console-bundle-and-accessories/",
+    publishedAt: "2026-08-11",
+    kind: "official",
+  },
+  "playstation-hands-on": {
+    id: "playstation-hands-on",
+    title: "Hands-on report: Marvel’s Wolverine",
+    publisher: "PlayStation Blog",
+    url: "https://blog.playstation.com/2026/08/13/hands-on-report-marvels-wolverine/",
+    publishedAt: "2026-08-13",
+    kind: "press",
+  },
+  "gamesradar-hands-on": {
+    id: "gamesradar-hands-on",
+    title: "After playing 2 hours of Marvel's Wolverine",
+    publisher: "GamesRadar+",
+    url: "https://www.gamesradar.com/games/action/after-playing-2-hours-of-marvels-wolverine-insomniac-has-crushed-my-fears-of-a-post-spider-man-slump-this-is-uniquely-logan/",
+    publishedAt: "2026-08-13",
+    kind: "press",
+  },
+  "performance-preview": {
+    id: "performance-preview",
+    title: "Marvel's Wolverine Performance Mode will run at 60fps with ray tracing on PS5",
+    publisher: "TechRadar",
+    url: "https://www.techradar.com/gaming/marvels-wolverine-performance-mode-will-run-at-60fps-with-ray-tracing-on-ps5-insomniac-confirms-its-the-default-mode-for-the-first-time-for-us-in-one-of-our-games-its-important-for-the-presentation",
+    publishedAt: "2026-08-14",
+    kind: "press",
+  },
+  "replay-preview": {
+    id: "replay-preview",
+    title: "New Game Plus and Nightmare Doors confirmed for launch",
+    publisher: "TechRadar",
+    url: "https://www.techradar.com/gaming/marvels-wolverine-confirmed-to-have-new-game-plus-at-launch-and-features-a-side-activity-called-nightmare-doors-where-players-confront-logans-nightmares-to-uncover-his-past",
+    publishedAt: "2026-08-14",
+    kind: "press",
+  },
+};
