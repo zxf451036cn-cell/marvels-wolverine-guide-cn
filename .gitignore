@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+
+# Next.js
+/.next/
+/out/
+
+# tests
+/coverage/
+/playwright-report/
+/test-results/
+/.playwright-cli/
+/output/
+
+# local environment
+.env*
+!.env.example
+
+# Vercel
+.vercel
+
+# editor and system files
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+next-env.d.ts
