@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Countdown } from "@/components/countdown";
 import { StatusBadge } from "@/components/status-badge";
 import { newsItems } from "@/content/news";
+import { safeJsonLd } from "@/lib/schema";
+import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 
 const coreFiles = [
   { number: "01", href: "/game-info", title: "游戏资料", kicker: "发售 · 平台 · 版本", description: "确认 9 月 15 日发售、PS5 独占、豪华版内容和购买前问题。" },
@@ -13,8 +15,16 @@ const coreFiles = [
 ] as const;
 
 export default function HomePage() {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", name: siteName, url: getSiteUrl(), inLanguage: "zh-CN", description: siteDescription },
+      { "@type": "VideoGame", name: "Marvel's Wolverine", gamePlatform: "PlayStation 5", playMode: "SinglePlayer", datePublished: "2026-09-15", developer: { "@type": "Organization", name: "Insomniac Games" }, url: `${getSiteUrl()}/game-info` },
+    ],
+  };
   return (
     <main id="main-content">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(homeSchema) }} />
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero__noise" aria-hidden="true" />
         <div className="hero__claws" aria-hidden="true"><i /><i /><i /></div>
