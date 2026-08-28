@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="site-footer__grid">
         <div>
           <p className="site-footer__brand">WOLVERINE / FIELD ARCHIVE</p>
-          <p>An independent, source-led guide to Insomniac Games' Marvel's Wolverine.</p>
+          <p>An independent, source-led guide to Insomniac Games&apos; Marvel&apos;s Wolverine.</p>
         </div>
         <div>
           <p className="site-footer__label">EDITORIAL STANDARD</p>

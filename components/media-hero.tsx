@@ -1,5 +1,7 @@
 import type { MediaAsset } from "@/content/media";
 
+/* eslint-disable @next/next/no-img-element -- local WebP artwork is pre-optimized for this static export */
+
 export function MediaHero({ asset, eager = true }: { asset: MediaAsset; eager?: boolean }) {
   return (
     <figure className="media-hero">

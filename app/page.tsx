@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+/* eslint-disable @next/next/no-img-element -- local WebP artwork is pre-optimized for this static export */
+
 import { Countdown } from "@/components/countdown";
 import { MediaGallery } from "@/components/media-gallery";
 import { StatusBadge } from "@/components/status-badge";
@@ -34,13 +36,13 @@ export default function HomePage() {
         <div className="hero__veil" aria-hidden="true" />
         <div className="hero__claws" aria-hidden="true"><i /><i /><i /></div>
         <div className="hero__content page-shell">
-          <div className="hero__eyebrow"><span>INSOMNIAC'S MARVEL'S WOLVERINE</span><span>PS5 / 2026</span></div>
+          <div className="hero__eyebrow"><span>INSOMNIAC&apos;S MARVEL&apos;S WOLVERINE</span><span>PS5 / 2026</span></div>
           <div className="hero__grid">
             <div className="hero__copy">
               <p className="hero__index">LOGAN // FILE 001</p>
               <h1 id="hero-title">WOLVERINE</h1>
               <p className="hero__tagline">THE PAST ALWAYS LEAVES A SCAR.</p>
-              <p className="hero__description">The independent field archive for Marvel's Wolverine—official intelligence, spoiler-conscious story files, and launch-ready combat guides with every claim tied to a source.</p>
+              <p className="hero__description">The independent field archive for Marvel&apos;s Wolverine—official intelligence, spoiler-conscious story files, and launch-ready combat guides with every claim tied to a source.</p>
               <div className="hero__actions">
                 <Link className="button button--primary" href="/guides/beginner">Prepare for Launch</Link>
                 <Link className="button button--ghost" href="/guides/combat">Break Down Combat</Link>

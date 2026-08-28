@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+/* eslint-disable @next/next/no-img-element -- local WebP artwork is pre-optimized for this static export */
+
 import { ContentCard } from "@/components/content-card";
 import { MediaGallery } from "@/components/media-gallery";
 import { SourceList } from "@/components/source-list";

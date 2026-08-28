@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+/* eslint-disable @next/next/no-img-element -- local WebP artwork is pre-optimized for this static export */
+
 import { StatusBadge } from "@/components/status-badge";
 import { mediaAssets } from "@/content/media";
 import { newsItems } from "@/content/news";

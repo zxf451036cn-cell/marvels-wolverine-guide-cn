@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element -- local WebP artwork is pre-optimized for this static export */
+
 import { useState } from "react";
 
 import type { Trailer } from "@/content/media";
