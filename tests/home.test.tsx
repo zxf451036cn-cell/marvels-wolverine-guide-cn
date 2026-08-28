@@ -8,10 +8,11 @@ describe("HomePage", () => {
     render(<HomePage />);
 
     expect(screen.getByRole("heading", { level: 1, name: /WOLVERINE/ })).toBeVisible();
-    expect(screen.getByText("猎杀之前，先读懂野兽")).toBeVisible();
-    expect(screen.getByText(/2026 年 9 月 15 日/)).toBeVisible();
-    expect(screen.getByRole("link", { name: "开始首发准备" })).toHaveAttribute("href", "/guides/beginner");
-    expect(screen.getByRole("link", { name: "拆解战斗系统" })).toHaveAttribute("href", "/guides/combat");
+    expect(screen.getByText("THE PAST ALWAYS LEAVES A SCAR.")).toBeVisible();
+    expect(screen.getByText(/SEPTEMBER 15, 2026/)).toBeVisible();
+    expect(screen.getByRole("link", { name: "Prepare for Launch" })).toHaveAttribute("href", "/guides/beginner");
+    expect(screen.getByRole("link", { name: "Break Down Combat" })).toHaveAttribute("href", "/guides/combat");
+    expect(screen.getByRole("button", { name: /Play extended gameplay trailer/i })).toBeVisible();
   });
 
   it("links to every core information section", () => {

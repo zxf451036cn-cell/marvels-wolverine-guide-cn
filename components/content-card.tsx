@@ -12,7 +12,7 @@ export function ContentCard({ page }: { page: ContentPage }) {
       </div>
       <h3>{page.title}</h3>
       <p>{page.description}</p>
-      <span className="content-card__action">打开档案 →</span>
+      <span className="content-card__action">Open file →</span>
     </Link>
   );
 }

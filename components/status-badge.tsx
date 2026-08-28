@@ -1,9 +1,9 @@
 import type { FactStatus } from "@/content/types";
 
 const labels: Record<FactStatus, string> = {
-  official: "官方确认",
-  handsOn: "媒体试玩",
-  postLaunch: "发售后验证",
+  official: "Official",
+  handsOn: "Hands-on",
+  postLaunch: "Verify after launch",
 };
 
 export function StatusBadge({ status }: { status: FactStatus }) {

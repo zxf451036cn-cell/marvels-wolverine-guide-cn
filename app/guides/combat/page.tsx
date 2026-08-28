@@ -6,5 +6,5 @@ const page = getContentPage("guides/combat");
 export const metadata = buildPageMetadata(page);
 
 export default function CombatGuidePage() {
-  return <ContentPageView page={page} breadcrumbs={[{ name: "首页", path: "/" }, { name: "攻略", path: "/guides/beginner" }, { name: "战斗系统", path: "/guides/combat" }]} />;
+  return <ContentPageView page={page} breadcrumbs={[{ name: "Home", path: "/" }, { name: "Guides", path: "/guides/beginner" }, { name: "Combat Systems", path: "/guides/combat" }]} />;
 }

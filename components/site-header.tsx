@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navigation = [
-  { href: "/game-info", label: "游戏资料" },
-  { href: "/guides/beginner", label: "新手入门" },
-  { href: "/guides/combat", label: "战斗系统" },
-  { href: "/characters/wolverine", label: "角色能力" },
-  { href: "/story", label: "剧情档案" },
-  { href: "/news", label: "最新动态" },
+  { href: "/game-info", label: "Game Overview" },
+  { href: "/guides/beginner", label: "Beginner Guide" },
+  { href: "/guides/combat", label: "Combat Systems" },
+  { href: "/characters/wolverine", label: "Wolverine" },
+  { href: "/story", label: "Story" },
+  { href: "/news", label: "Latest" },
 ] as const;
 
 export function SiteHeader() {
@@ -37,15 +37,15 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link className="brand" href="/" aria-label="金刚狼情报档案首页">
+        <Link className="brand" href="/" aria-label="Wolverine Field Archive home">
           <span className="brand__mark" aria-hidden="true">X</span>
           <span className="brand__copy">
             <strong>WOLVERINE</strong>
-            <small>情报与攻略档案</small>
+            <small>FIELD ARCHIVE</small>
           </span>
         </Link>
 
-        <nav className="desktop-nav" aria-label="主导航">
+        <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation.map((item) => (
             <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
@@ -54,7 +54,7 @@ export function SiteHeader() {
         <button
           className="menu-toggle"
           type="button"
-          aria-label={menuOpen ? "关闭导航" : "打开导航"}
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-controls="mobile-navigation"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
@@ -68,11 +68,11 @@ export function SiteHeader() {
       <nav
         id="mobile-navigation"
         className="mobile-nav"
-        aria-label="移动导航"
+        aria-label="Mobile navigation"
         hidden={!menuOpen}
       >
-        <p className="mobile-nav__label">SELECT FILE / 选择档案</p>
-        <Link href="/" onClick={closeMenu}>首页</Link>
+        <p className="mobile-nav__label">SELECT FILE / FIELD ARCHIVE</p>
+        <Link href="/" onClick={closeMenu}>Home</Link>
         {navigation.map((item, index) => (
           <Link key={item.href} href={item.href} onClick={closeMenu}>
             <span aria-hidden="true">0{index + 1}</span>

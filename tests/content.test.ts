@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { contentPages } from "@/content/pages";
+import { newsItems } from "@/content/news";
 import { sources } from "@/content/sources";
 
 describe("content integrity", () => {
@@ -25,5 +26,11 @@ describe("content integrity", () => {
         expect(sources[sourceId]).toBeDefined();
       }
     }
+  });
+
+  it("publishes natural English copy across the editorial model", () => {
+    expect(contentPages["guides/combat"].title).toBe("Combat Systems: Turn Rage Into a Second Life");
+    expect(newsItems[0].title).toBe("The Complete Soundtrack Arrives August 28");
+    expect(JSON.stringify({ contentPages, newsItems, sources })).not.toMatch(/[\u3400-\u9fff]/);
   });
 });

@@ -3,9 +3,9 @@ import type { Source } from "@/content/types";
 export const sources: Record<string, Source> = {
   "playstation-game": {
     id: "playstation-game",
-    title: "《漫威金刚狼》PS5 游戏页",
+    title: "Marvel's Wolverine — Official PS5 Game Page",
     publisher: "PlayStation",
-    url: "https://www.playstation.com/zh-hans-hk/games/marvels-wolverine/",
+    url: "https://www.playstation.com/en-us/games/marvels-wolverine/",
     publishedAt: "2026-08-27",
     kind: "official",
   },
