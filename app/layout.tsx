@@ -10,22 +10,22 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "漫威金刚狼中文攻略｜Wolverine PS5 情报档案",
-    template: "%s｜Wolverine 中文攻略",
+    default: "Marvel's Wolverine Guide | PS5 Field Archive",
+    template: "%s | Wolverine Field Archive",
   },
   description: siteDescription,
   applicationName: siteName,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    locale: "zh_CN",
+    locale: "en_US",
     siteName,
-    title: "漫威金刚狼中文攻略｜Wolverine PS5 情报档案",
+    title: "Marvel's Wolverine Guide | PS5 Field Archive",
     description: siteDescription,
     url: "/",
   },
   twitter: { card: "summary_large_image", title: siteName, description: siteDescription },
-  keywords: ["漫威金刚狼攻略", "Wolverine PS5", "漫威金刚狼发售日期", "金刚狼战斗系统", "Marvel's Wolverine"],
+  keywords: ["Marvel's Wolverine guide", "Wolverine PS5", "Marvel's Wolverine release date", "Wolverine combat system", "Wolverine beginner guide"],
 };
 
 export const viewport: Viewport = {
@@ -36,9 +36,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="zh-CN" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
-        <a className="skip-link" href="#main-content">跳到主要内容</a>
+        <a className="skip-link" href="#main-content">Skip to main content</a>
         <SiteHeader />
         {children}
         <SiteFooter />

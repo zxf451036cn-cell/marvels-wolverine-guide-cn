@@ -9,10 +9,10 @@ type CountdownProps = {
 };
 
 const units: readonly { key: keyof Omit<CountdownValue, "launched">; label: string }[] = [
-  { key: "days", label: "天" },
-  { key: "hours", label: "时" },
-  { key: "minutes", label: "分" },
-  { key: "seconds", label: "秒" },
+  { key: "days", label: "DAYS" },
+  { key: "hours", label: "HRS" },
+  { key: "minutes", label: "MIN" },
+  { key: "seconds", label: "SEC" },
 ];
 
 export function Countdown({ launchIso }: CountdownProps) {
@@ -28,15 +28,15 @@ export function Countdown({ launchIso }: CountdownProps) {
   }, [launchIso]);
 
   if (!countdown) {
-    return <p className="countdown__fallback">2026 年 9 月 15 日 · PS5</p>;
+    return <p className="countdown__fallback">SEPTEMBER 15, 2026 · PS5</p>;
   }
 
   if (countdown.launched) {
-    return <p className="countdown__launched">狩猎已经开始 · 现已登陆 PS5</p>;
+    return <p className="countdown__launched">THE HUNT HAS BEGUN · AVAILABLE ON PS5</p>;
   }
 
   return (
-    <div className="countdown" aria-label="距离发售时间">
+    <div className="countdown" aria-label="Time until launch">
       {units.map(({ key, label }) => (
         <div className="countdown__unit" key={key}>
           <strong>{String(countdown[key]).padStart(2, "0")}</strong>
