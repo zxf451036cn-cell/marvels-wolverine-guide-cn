@@ -5,11 +5,11 @@ import { buildPageMetadata } from "@/lib/metadata";
 import { buildArticleSchema, buildBreadcrumbSchema } from "@/lib/schema";
 
 describe("page metadata", () => {
-  it("builds Chinese search metadata for the combat guide", () => {
+  it("builds English search metadata for the combat guide", () => {
     const metadata = buildPageMetadata(getContentPage("guides/combat"));
 
-    expect(metadata.title).toContain("战斗系统");
-    expect(metadata.description).toContain("怒气");
+    expect(metadata.title).toContain("Combat Systems");
+    expect(metadata.description).toContain("Rage");
     expect(metadata.alternates?.canonical).toBe("/guides/combat");
     expect(metadata.openGraph?.title).toBe(metadata.title);
   });
@@ -30,20 +30,20 @@ describe("structured data", () => {
     const schema = buildArticleSchema(getContentPage("characters/wolverine"));
 
     expect(schema["@type"]).toBe("Article");
-    expect(schema.headline).toContain("金刚狼能力档案");
+    expect(schema.headline).toContain("Wolverine Ability File");
     expect(schema.url).toBe("/characters/wolverine");
     expect(schema.dateModified).toBe("2026-08-28");
   });
 
   it("builds ordered breadcrumb items", () => {
     const schema = buildBreadcrumbSchema([
-      { name: "首页", path: "/" },
-      { name: "战斗系统", path: "/guides/combat" },
+      { name: "Home", path: "/" },
+      { name: "Combat Systems", path: "/guides/combat" },
     ]);
 
     expect(schema.itemListElement).toEqual([
-      { "@type": "ListItem", position: 1, name: "首页", item: "/" },
-      { "@type": "ListItem", position: 2, name: "战斗系统", item: "/guides/combat" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+      { "@type": "ListItem", position: 2, name: "Combat Systems", item: "/guides/combat" },
     ]);
   });
 });
