@@ -155,6 +155,8 @@ img { display: block; max-width: 100%; }
 /* Research files */
 .content-page { background: var(--ink); color: var(--paper); }
 .content-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 84% 22%, rgba(31,68,99,.7), transparent 30%), linear-gradient(145deg, #111216 0 58%, #32100f 100%); }
+.content-hero__backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .36; filter: saturate(.78) contrast(1.08); }
+.content-hero::before { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(5,6,8,.96) 0 42%, rgba(5,6,8,.38) 76%, rgba(5,6,8,.72)), linear-gradient(0deg, rgba(5,6,8,.82), transparent); content: ""; }
 .content-hero::after { position: absolute; inset: 0; opacity: .12; background-image: radial-gradient(var(--paper) .7px, transparent .7px); background-size: 7px 7px; content: ""; pointer-events: none; }
 .content-hero__grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 70px; align-items: end; min-height: 480px; padding-block: 110px 64px; }
 .breadcrumbs { margin-bottom: 36px; color: var(--muted); font-size: 10px; letter-spacing: .12em; }
@@ -170,6 +172,7 @@ img { display: block; max-width: 100%; }
 .article-section__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
 .article-section h2, .faq-panel h2, .source-panel h2, .edition-panel h2, .related-section h2 { margin: 0; font: clamp(31px,4vw,46px)/1.05 var(--display); letter-spacing: .025em; }
 .article-section p { margin: 15px 0 0; color: #c6c5c0; font-size: 16px; line-height: 1.9; }
+.article-media { display: grid; gap: 14px; margin: 0 0 76px 74px; }
 .highlight-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 0; padding: 0; list-style: none; }
 .highlight-list li, .tag-row span { padding: 7px 10px; border: 1px solid rgba(250,204,22,.45); color: var(--yellow); font-size: 10px; font-weight: 900; letter-spacing: .08em; }
 .article-aside { position: sticky; top: 110px; display: flex; flex-direction: column; padding-left: 22px; border-left: 2px solid var(--red); }

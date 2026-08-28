@@ -6,5 +6,5 @@ const page = getContentPage("characters/wolverine");
 export const metadata = buildPageMetadata(page);
 
 export default function WolverinePage() {
-  return <ContentPageView page={page} breadcrumbs={[{ name: "首页", path: "/" }, { name: "角色能力", path: "/characters/wolverine" }, { name: "金刚狼", path: "/characters/wolverine" }]} />;
+  return <ContentPageView page={page} breadcrumbs={[{ name: "Home", path: "/" }, { name: "Ability Files", path: "/characters/wolverine" }, { name: "Wolverine", path: "/characters/wolverine" }]} />;
 }

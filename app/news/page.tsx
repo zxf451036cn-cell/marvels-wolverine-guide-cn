@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 
 import { StatusBadge } from "@/components/status-badge";
+import { mediaAssets } from "@/content/media";
 import { newsItems } from "@/content/news";
 import { sources } from "@/content/sources";
 
 export const metadata: Metadata = {
-  title: "《漫威金刚狼》最新动态",
-  description: "追踪《Marvel's Wolverine》官方预告、媒体试玩、PS5 限定硬件、原声带与首发前重要更新。",
+  title: "Marvel's Wolverine News and Official Updates",
+  description: "Track official Marvel's Wolverine trailers, hands-on reports, PS5 hardware, soundtrack news, and every important update before launch.",
   alternates: { canonical: "/news" },
 };
 
@@ -14,16 +15,17 @@ export default function NewsPage() {
   return (
     <main id="main-content" className="content-page news-archive">
       <header className="content-hero">
+        <img className="content-hero__backdrop" src={mediaAssets.sabretooth.src} alt="" width={mediaAssets.sabretooth.width} height={mediaAssets.sabretooth.height} fetchPriority="high" />
         <div className="content-hero__grid shell">
           <div>
-            <p className="content-hero__eyebrow">LATEST INTEL / 最新动态</p>
-            <h1>前线情报</h1>
-            <p className="content-hero__intro">只收录可追溯的官方公告与获准媒体试玩，按日期倒序整理。</p>
+            <p className="content-hero__eyebrow">LATEST INTEL / VERIFIED UPDATES</p>
+            <h1>FIELD TRANSMISSIONS</h1>
+            <p className="content-hero__intro">Official announcements and approved hands-on reporting, source-linked and ordered from newest to oldest.</p>
           </div>
-          <aside className="content-hero__stamp"><span>最后更新</span><strong>2026-08-28</strong><small>共 {newsItems.length} 条已核查动态</small></aside>
+          <aside className="content-hero__stamp"><span>LAST UPDATED</span><strong>2026-08-28</strong><small>{newsItems.length} verified transmissions</small></aside>
         </div>
       </header>
-      <section className="news-timeline shell" aria-label="最新动态列表">
+      <section className="news-timeline shell" aria-label="Latest Marvel's Wolverine updates">
         {newsItems.map((item) => {
           const source = sources[item.sourceId];
           return (
@@ -34,7 +36,7 @@ export default function NewsPage() {
                 <h2>{item.title}</h2>
                 <p>{item.summary}</p>
                 <div className="tag-row">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                <a href={source.url} target="_blank" rel="noreferrer">查看来源：{source.publisher} →</a>
+                <a href={source.url} target="_blank" rel="noreferrer">Read source: {source.publisher} →</a>
               </div>
             </article>
           );

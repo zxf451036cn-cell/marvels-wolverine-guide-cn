@@ -7,18 +7,18 @@ export const metadata = buildPageMetadata(page);
 
 export default function GameInfoPage() {
   return (
-    <ContentPageView page={page} breadcrumbs={[{ name: "首页", path: "/" }, { name: "游戏资料", path: "/game-info" }]}>
+    <ContentPageView page={page} breadcrumbs={[{ name: "Home", path: "/" }, { name: "Game Overview", path: "/game-info" }]}>
       <section className="edition-panel" aria-labelledby="edition-title">
         <div className="section-kicker">EDITION CHECK</div>
-        <h2 id="edition-title">版本对照</h2>
+        <h2 id="edition-title">Compare Editions</h2>
         <div className="table-scroll">
           <table>
-            <thead><tr><th>内容</th><th>普通版</th><th>数字豪华版</th></tr></thead>
+            <thead><tr><th>Content</th><th>Standard Edition</th><th>Digital Deluxe</th></tr></thead>
             <tbody>
-              <tr><th>完整游戏</th><td>包含</td><td>包含</td></tr>
-              <tr><th>专属战衣 / 爪子</th><td>—</td><td>各 5 款，纯外观</td></tr>
-              <tr><th>额外技能点</th><td>—</td><td>包含</td></tr>
-              <tr><th>后续升级</th><td>可购买升级</td><td>不适用</td></tr>
+              <tr><th>Full game</th><td>Included</td><td>Included</td></tr>
+              <tr><th>Exclusive suits / claws</th><td>—</td><td>Five of each; cosmetic</td></tr>
+              <tr><th>Technique Points</th><td>—</td><td>Bonus points included</td></tr>
+              <tr><th>Later upgrade</th><td>Available separately</td><td>Not applicable</td></tr>
             </tbody>
           </table>
         </div>

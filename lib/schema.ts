@@ -11,17 +11,17 @@ export function buildArticleSchema(page: ContentPage): Record<string, unknown> {
     "@type": "Article",
     headline: page.title,
     description: page.description,
-    inLanguage: "zh-CN",
+    inLanguage: "en",
     dateModified: page.updatedAt,
     datePublished: "2026-08-28",
     url: resolvedPath(`/${page.slug}`),
     author: {
       "@type": "Organization",
-      name: "Wolverine 中文情报与攻略档案",
+      name: "Wolverine Field Archive",
     },
     publisher: {
       "@type": "Organization",
-      name: "Wolverine 中文情报与攻略档案",
+      name: "Wolverine Field Archive",
     },
   };
 }

@@ -6,5 +6,5 @@ const page = getContentPage("story");
 export const metadata = buildPageMetadata(page);
 
 export default function StoryPage() {
-  return <ContentPageView page={page} breadcrumbs={[{ name: "首页", path: "/" }, { name: "剧情与角色", path: "/story" }]} />;
+  return <ContentPageView page={page} breadcrumbs={[{ name: "Home", path: "/" }, { name: "Story and Characters", path: "/story" }]} />;
 }

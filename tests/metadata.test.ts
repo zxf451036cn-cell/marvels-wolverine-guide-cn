@@ -12,6 +12,7 @@ describe("page metadata", () => {
     expect(metadata.description).toContain("Rage");
     expect(metadata.alternates?.canonical).toBe("/guides/combat");
     expect(metadata.openGraph?.title).toBe(metadata.title);
+    expect(metadata.openGraph).toMatchObject({ locale: "en_US", url: "/guides/combat" });
   });
 
   it("gives every content route a unique title and description", () => {
@@ -31,8 +32,17 @@ describe("structured data", () => {
 
     expect(schema["@type"]).toBe("Article");
     expect(schema.headline).toContain("Wolverine Ability File");
+    expect(schema.inLanguage).toBe("en");
     expect(schema.url).toBe("/characters/wolverine");
     expect(schema.dateModified).toBe("2026-08-28");
+  });
+
+  it("keeps page metadata and schema entirely English", () => {
+    const payload = Object.values(contentPages).map((page) => ({
+      metadata: buildPageMetadata(page),
+      schema: buildArticleSchema(page),
+    }));
+    expect(JSON.stringify(payload)).not.toMatch(/[\u3400-\u9fff]/);
   });
 
   it("builds ordered breadcrumb items", () => {
