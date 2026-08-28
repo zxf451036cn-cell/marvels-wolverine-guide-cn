@@ -44,7 +44,7 @@ export function ContentPageView({
           <div>
             <nav className="breadcrumbs" aria-label="Breadcrumbs">
               {breadcrumbs.map((item, index) => (
-                <span key={item.path}>{index > 0 && " / "}{item.name}</span>
+                <span key={`${item.path}-${index}`}>{index > 0 && " / "}{item.name}</span>
               ))}
             </nav>
             <p className="content-hero__eyebrow">{page.eyebrow}</p>
